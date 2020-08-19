@@ -30,14 +30,12 @@ const routes: Array<RouteConfig> = [
   {
     path: '/forgot-password',
     name: 'ForgotPassword',
-    component: ForgotPassword,
-    children: [
-      {
-        path: '/reset-password',
-        name: 'ResetPassword',
-        component: ResetPassword
-      }
-    ]
+    component: ForgotPassword
+  },
+  {
+    path: '/reset-password',
+    name: 'ResetPassword',
+    component: ResetPassword
   }
 ]
 
