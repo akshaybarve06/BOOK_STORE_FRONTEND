@@ -4,6 +4,7 @@ import SignIn from '../components/SignIn.vue'
 import SignUp from '../components/SignUp.vue'
 import ForgotPassword from '../components/ForgotPassword.vue'
 import ResetPassword from '../components/ResetPassword.vue'
+import Cart from '../components/cart.vue'
 
 Vue.use(VueRouter)
 
@@ -36,7 +37,21 @@ const routes: Array<RouteConfig> = [
     path: '/reset-password',
     name: 'ResetPassword',
     component: ResetPassword
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
   }
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () =>
+  //     import(/* webpackChunkName: 'about' */ '../views/About.vue')
+  // }
 ]
 
 const router = new VueRouter({
