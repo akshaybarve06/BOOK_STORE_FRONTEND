@@ -1,5 +1,6 @@
 <template>
   <div class="login-box">
+    <img svg-inline class='user-icon' src='../assets/user-login-2.png' alt='cart'/>
     <h1>Welcome to BookStore</h1>
     <div class="input-wrapper">
       <input class="field" type="email" placeholder="Enter your email" required />
