@@ -38,13 +38,8 @@ import books from '../data/books.json'
 export default Vue.extend({
   data () {
     return {
-      allBooks: []
+      allBooks: books
     }
-  },
-  methods: {
-  },
-  mounted () {
-    this.allBooks = books
   }
 })
 </script>

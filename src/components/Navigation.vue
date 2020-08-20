@@ -1,14 +1,13 @@
 <template>
           <div class='navbar'>
             <div class='book-menu'>
-            <img svg-inline class='icon' src='../assets/book.png' alt='example' />
+            <img svg-inline class='book-icon' src='../assets/book.png' alt='book' />
             <a href='/home' class='link'><lable class='bookstore'>Bookstore</lable></a>
             <input type='text' placeholder='   Search Book Here...' solo class='search'/>
-            <button class='search-btn'>search</button>
-            <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='../assets/cart1.png' alt='cart' /></router-link>
-            <router-link to='/about' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
-            <router-link to='/about' class='link'><img svg-inline class='cart-icon' src='../assets/login.jpg' alt='login' /></router-link>
-            <!--<a href="#"><label>Login </label></a> -->
+            <button class='search-btn'><img svg-inline class='search-icon' src='../assets/search.png' alt='search' /></button>
+            <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='../assets/cart.png' alt='cart' /></router-link>
+            <router-link to='/wishlist' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
+            <router-link to='/signin' class='link'><img svg-inline class='login-icon' src='../assets/user-login.png' alt='login' /></router-link>
             </div>
         </div>
 </template>
@@ -22,9 +21,9 @@ export default Vue.extend({
 </script>
 <style scoped>
   .navbar {
-    background-color: #00BFFF;
+    background-color: rgb(29, 140, 204);
     width: 100%;
-    height: 13%;
+    height: 95px;
     box-shadow: teal;
   }
   .book-menu {
@@ -32,49 +31,56 @@ export default Vue.extend({
     flex-direction: row;
     padding: 2%;
   }
-  .bookstore, .cart, .wishlist, .login {
+  .bookstore {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 140%;
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-  }
-  .cart-icon {
-    width: 30px;
-    height: 34px;
-    margin-left: 12%;
-  }
-   .wishlist-icon {
-    width: 35px;
-    height: 38px;
-    margin-left: 12%;
-  }
-  .cart, .wishlist {
-    margin-right: 25px
-  }
-  .link {
-    color: #00BFFF;
-  }
-  .bookstore {
     margin-left: 8%;
     font-size: 170%;
   }
+  .book-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 11px;
+  }
+  .cart-icon {
+    width: 35px;
+    height: 38px;
+    margin-right: 10px;
+  }
+  .wishlist-icon {
+    width: 35px;
+    height: 38px;
+    margin-left: 10px;
+  }
+  .login-icon {
+    width: 35px;
+    height: 38px;
+    margin-left: 12px;
+  }
+  .link {
+    color: rgb(29, 140, 204);
+  }
   .search {
-    width: 40%;
+    width: 780px;
     height: 40px;
-    margin-left: 3%;
+    margin-left: 160px;
     margin-top: 2px;
     background-color: white;
-    box-shadow: gray
+    box-shadow: gray;
+    border-radius: 5px 0px 0px 5px;
   }
   .search-btn {
-     margin-right: 20%;
-     background-color: black;
      height: 40px;
      margin-top: 2px;
-     color: white;
-     width: 6%;
+     width: 40px;
+     border-radius: 0px 5px 5px 0px;
+     margin-right: 160px;
+  }
+  .search-icon {
+     width: 40px;
+     height: 40px;
+     border-radius: 0px 5px 5px 0px;
+     background-color: white;
   }
 </style>

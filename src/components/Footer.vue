@@ -19,7 +19,7 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00BFFF;
+  background-color: rgb(29, 140, 204);
   color: white;
   height: 50px;
   font-family: fontawesome;

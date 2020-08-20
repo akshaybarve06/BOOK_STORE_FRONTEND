@@ -5,7 +5,8 @@ import SignIn from '../components/SignIn.vue'
 import SignUp from '../components/SignUp.vue'
 import ForgotPassword from '../components/ForgotPassword.vue'
 import ResetPassword from '../components/ResetPassword.vue'
-import Cart from '../components/cart.vue'
+import Cart from '../components/Cart.vue'
+import Wishlist from '../components/Wishlist.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes: Array<RouteConfig> = [
     path: '/cart',
     name: 'Cart',
     component: Cart
+  },
+  {
+    path: '/wishlist',
+    name: 'Wishlist',
+    component: Wishlist
   }
 ]
 
