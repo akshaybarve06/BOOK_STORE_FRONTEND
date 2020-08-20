@@ -8,7 +8,4 @@
   </div>
 </template>
 <style scoped>
-  .about {
-    margin: 50%;
-  }
 </style>
