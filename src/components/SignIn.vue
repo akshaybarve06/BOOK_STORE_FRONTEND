@@ -43,6 +43,7 @@ export default Vue.extend({
           this.input.password === this.users[index].password) {
             sessionStorage.setItem('userID', this.users[index].userID)
             router.push('/home')
+            window.location.reload(true)
           }
         }
       }
