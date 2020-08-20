@@ -25,8 +25,7 @@ export default Vue.extend({
   font-family: fontawesome;
   bottom: 0;
   size: inherit;
-  position: sticky;
-  margin-top: 500px;
+  position: relative;
   }
   .footer-text-style {
   display: flex;
