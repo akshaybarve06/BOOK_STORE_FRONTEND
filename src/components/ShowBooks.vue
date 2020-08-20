@@ -34,6 +34,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import books from '../data/books.json'
+
 export default Vue.extend({
   data () {
     return {
@@ -48,5 +49,5 @@ export default Vue.extend({
 })
 </script>
 <style lang="stylus" scoped>
-@import '../assets/Styles/ShowBooks.scss'
+@import '../assets/styles/ShowBooks.scss'
 </style>
