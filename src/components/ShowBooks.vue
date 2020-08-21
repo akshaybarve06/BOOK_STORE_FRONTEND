@@ -28,7 +28,9 @@
           </v-card-actions>
         </div>
       </v-flex>
+      <!-- <button @click='searchData()'>search</button> -->
     </v-card>
+    <h1>Your book name {{ $store.getters.search }}</h1>
   </div>
 </template>
 <script lang="ts">
@@ -41,6 +43,11 @@ export default Vue.extend({
       allBooks: books
     }
   }
+  // methods: {
+  //   searchData () {
+  //     console.log('hii', this.$store.getters.search)
+  //   }
+  // }
 })
 </script>
 <style lang="stylus" scoped>

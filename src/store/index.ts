@@ -3,13 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
+// export default new Vuex.Store({
   state: {
+    search: ''
   },
   mutations: {
+    change(state, search) {
+      state.search = search
+    }
   },
-  actions: {
-  },
-  modules: {
+  getters: {
+    search: state => state.search
   }
 })

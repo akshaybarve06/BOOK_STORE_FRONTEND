@@ -3,8 +3,8 @@
             <div class='book-menu'>
             <img svg-inline class='book-icon' src='../assets/book.png' alt='book' />
             <a href='/home' class='link'><lable class='bookstore'>Bookstore</lable></a>
-            <input type='text' placeholder='   Search Book Here...' solo class='search'/>
-            <button class='search-btn'><img svg-inline class='search-icon' src='../assets/search.png' alt='search' /></button>
+            <input v-model='inputData' name='search' placeholder='   Search Book Here...' class='search'/>
+            <button @click='changed' class='search-btn'><img svg-inline class='search-icon' src='../assets/search.png' alt='search' /></button>
             <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='../assets/cart.png' alt='cart' /></router-link>
             <router-link to='/wishlist' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
             <router-link to='/signin' class='link'><img svg-inline class='login-icon' src='../assets/user-login.png' alt='login' /></router-link>
@@ -14,9 +14,20 @@
 
 <script lang='ts'>
 import Vue from 'vue'
+// import Service from '../data/books.json'
 
 export default Vue.extend({
-  name: 'Navigation'
+  name: 'Navigation',
+  data: () => {
+    return {
+      inputData: ''
+    }
+  },
+  methods: {
+    changed: function (event: any) {
+      this.$store.commit('change', this.inputData)
+    }
+  }
 })
 </script>
 <style scoped>
@@ -64,7 +75,7 @@ export default Vue.extend({
   .search {
     width: 780px;
     height: 40px;
-    margin-left: 160px;
+    margin-left: 130px;
     margin-top: 2px;
     background-color: white;
     box-shadow: gray;
@@ -75,7 +86,7 @@ export default Vue.extend({
      margin-top: 2px;
      width: 40px;
      border-radius: 0px 5px 5px 0px;
-     margin-right: 160px;
+     margin-right: 130px;
   }
   .search-icon {
      width: 40px;
