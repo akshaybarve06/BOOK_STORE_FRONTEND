@@ -21,7 +21,7 @@ export default Vue.extend({
   name: 'Navigation',
   data: () => {
     return {
-      isLoggedIn: sessionStorage.getItem('userID'),
+      isLoggedIn: localStorage.getItem('userID'),
       searchInput: '',
       filterBookData: []
     }
@@ -35,7 +35,7 @@ export default Vue.extend({
       console.log('search', this.$store.getters.searchInput)
     },
     logout () {
-      sessionStorage.removeItem('userID')
+      localStorage.removeItem('userID')
     }
   }
 })

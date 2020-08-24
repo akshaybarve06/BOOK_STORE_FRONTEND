@@ -45,13 +45,13 @@ export default Vue.extend({
         for (let index = 0; index < this.users.length; index++) {
           if (this.input.email === this.users[index].email &&
           this.input.password === this.users[index].password) {
-            sessionStorage.setItem('userID', this.users[index].userID)
+            localStorage.setItem('userID', this.users[index].userID)
             router.push('/')
             window.location.reload(true)
           }
         }
       }
-      if (!sessionStorage.getItem('userID')) {
+      if (!localStorage.getItem('userID')) {
         alert("Email and Password doesn't match!")
         this.input.email = ''
         this.input.password = ''
