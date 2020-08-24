@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <Navigation/>
-      <router-view></router-view>
+      <router-view style="margin-bottom: 55px"></router-view>
       <Footer/>
     </v-main>
   </v-app>

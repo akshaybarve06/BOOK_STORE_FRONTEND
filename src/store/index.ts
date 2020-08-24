@@ -1,19 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import books from '../data/books.json'
+import { filter } from 'vue/types/umd'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
-// export default new Vuex.Store({
   state: {
-    search: ''
+    searchInput: '',
+    allBooks: books,
+    filterBookData: []
   },
   mutations: {
-    change(state, search) {
-      state.search = search
+    updateFilterBooksArray (state, filterBookData) {
+      state.filterBookData = filterBookData
+    },
+    updateSearchInput (state, searchInput) {
+      state.searchInput = searchInput
     }
   },
   getters: {
-    search: state => state.search
+    filterBookData: state => state.filterBookData,
+    searchInput: state => state.searchInput,
+    getBooksBasedOnSearch: (state) => (searchInput: any) => {
+      return state.allBooks.filter((book) => {
+        return book.title.includes(searchInput) || book.authors.includes(searchInput) || book.categories.includes(searchInput)
+      })
+    }
   }
 })

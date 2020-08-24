@@ -2,8 +2,8 @@
           <div class='navbar'>
             <div class='book-menu'>
             <img svg-inline class='book-icon' src='../assets/book.png' alt='book' />
-            <a href='/home' class='link'><lable class='bookstore'>Bookstore</lable></a>
-            <input v-model='inputData' name='search' placeholder='   Search Book Here...' class='search'/>
+            <a href="/" class="link"><lable class='bookstore'>Bookstore</lable></a>
+            <input v-model='searchInput' @input='changed' placeholder='   Search Book Here...' class='search'/>
             <button @click='changed' class='search-btn'><img svg-inline class='search-icon' src='../assets/search.png' alt='search' /></button>
             <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='../assets/cart.png' alt='cart' /></router-link>
             <router-link to='/wishlist' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
@@ -14,18 +14,22 @@
 
 <script lang='ts'>
 import Vue from 'vue'
-// import Service from '../data/books.json'
 
 export default Vue.extend({
   name: 'Navigation',
   data: () => {
     return {
-      inputData: ''
+      searchInput: '',
+      filterBookData: []
     }
   },
   methods: {
     changed: function (event: any) {
-      this.$store.commit('change', this.inputData)
+      this.filterBookData = this.$store.getters.getBooksBasedOnSearch(this.searchInput)
+      this.$store.commit('updateFilterBooksArray', this.filterBookData)
+      this.$store.commit('updateSearchInput', this.searchInput)
+      console.log('filter', this.filterBookData)
+      console.log('search', this.$store.getters.searchInput)
     }
   }
 })
@@ -46,7 +50,7 @@ export default Vue.extend({
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 140%;
-    margin-left: 8%;
+    margin-left: 10px;
     font-size: 170%;
   }
   .book-icon {
