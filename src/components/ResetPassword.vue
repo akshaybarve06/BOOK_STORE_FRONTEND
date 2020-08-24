@@ -1,4 +1,5 @@
 <template>
+<body id="login">
   <div class="login-box">
     <img svg-inline class='user-icon' src='../assets/user-login-2.png' alt='cart'/>
     <h1>Welcome to BookStore</h1>
@@ -16,6 +17,7 @@
       <a class="ref-link" style="color:white" href="/signin">Have an account? SignIn</a>
     </div>
   </div>
+</body>
 </template>
 
 <script lang="ts">

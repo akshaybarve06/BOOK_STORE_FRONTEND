@@ -3,15 +3,12 @@ $primary-blue: rgb(29, 140, 204);
 $primary-white: rgb(255, 255, 255);
 $primary-black: rgb(0, 0, 0);
 $primary-grey: rgb(56, 56, 56);
+$secondary-grey: rgb(226, 223, 223);
 
 html,
 body {
   height: 100%;
 }
-
-// body {
-//     margin: 0;
-// }
 
 // login and signin box
 .login-box {
@@ -27,7 +24,7 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   color: $primary-white;
-  background-color: $primary-blue;
+  background-image: linear-gradient($secondary-grey, $primary-blue);
   border: 1px groove $primary-black;
   padding: 20px;
 }
@@ -65,4 +62,10 @@ body {
 
 .user-icon{
   height: 80px;
+}
+
+body#login{
+  background-image: url('../book-background.jpg');
+  height: 80%;
+  overflow: scroll;
 }
