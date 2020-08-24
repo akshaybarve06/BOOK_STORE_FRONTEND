@@ -24,7 +24,7 @@
             items.price
           }}</v-title>
           <v-card-actions class="buttons">
-            <v-card flat dense @click="addToBag()"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
+            <v-card flat dense @click="addToBag(items)"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
             <v-card flat dense @click="addToWishList()"><v-text class="wishlist">WISHLIST</v-text></v-card>
           </v-card-actions>
         </div>
@@ -55,14 +55,12 @@
             items.price
           }}</v-title>
           <v-card-actions class="buttons">
-            <v-card flat dense @click="addToBag()"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
-            <v-card flat dense @click="addToWishList()"><v-text class="wishlist">WISHLIST</v-text></v-card>
+            <v-card flat dense v-on:click="addToBag(items)"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
+            <v-card flat dense v-on:click="addToWishList()"><v-text class="wishlist">WISHLIST</v-text></v-card>
           </v-card-actions>
         </div>
       </v-flex>
-  <!-- <button @click='search()'>search</button> -->
     </v-card>
-  <!-- <h1>Your book name {{ $store.getters.filterBookData }}</h1> -->
   </div>
   </div>
 </template>
@@ -71,9 +69,22 @@ import Vue from 'vue'
 import books from '../data/books.json'
 
 export default Vue.extend({
+  name: 'Showbooks',
   data () {
     return {
-      allBooks: books
+      allBooks: books,
+      cartArray: []
+    }
+  },
+  methods: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    addToBag (book: any) {
+      this.cartArray.push(book)
+      localStorage.setItem('cartBooks', JSON.stringify(this.cartArray))
+      // if(!localStorage.getItem('cartBooks')){
+      // window.localStorage.setItem('cartBooks', JSON.stringify($scope.cartBooks));
+      console.log(this.cartArray.toString())
+      alert('BOOK ADDED TO CART...')
     }
   }
 })

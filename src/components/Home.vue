@@ -12,14 +12,6 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.bookgrid{
-  padding-left: 15%;
-}
-@media (min-width :360px) {
-  .bookgrid{
-    padding-left: 5%;
-  }
-}
+<style lang="stylus" scoped>
+@import '../assets/styles/Home.scss'
 </style>

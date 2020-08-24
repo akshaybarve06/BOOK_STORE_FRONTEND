@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import books from '../data/books.json'
-import { filter } from 'vue/types/umd'
 
 Vue.use(Vuex)
 

@@ -46,7 +46,7 @@ export default Vue.extend({
           if (this.input.email === this.users[index].email &&
           this.input.password === this.users[index].password) {
             sessionStorage.setItem('userID', this.users[index].userID)
-            router.push('/home')
+            router.push('/')
             window.location.reload(true)
           }
         }
