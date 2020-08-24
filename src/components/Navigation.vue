@@ -7,7 +7,9 @@
             <button @click='changed' class='search-btn'><img svg-inline class='search-icon' src='../assets/search.png' alt='search' /></button>
             <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='../assets/cart.png' alt='cart' /></router-link>
             <router-link to='/wishlist' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
-            <router-link to='/signin' class='link'><img svg-inline class='login-icon' src='../assets/user-login.png' alt='login' /></router-link>
+            <!-- <router-link to='/signin' class='link'><img svg-inline class='login-icon' src='../assets/user-login.png' alt='login' /></router-link> -->
+            <a v-if="!this.isLoggedIn" href="/signin" class="login-button"><button >LOGIN</button></a>
+            <a v-if="this.isLoggedIn" href="/home" @click="logout()" class="login-button"><button>LOGOUT</button></a>
             </div>
         </div>
 </template>
@@ -19,22 +21,36 @@ export default Vue.extend({
   name: 'Navigation',
   data: () => {
     return {
+      isLoggedIn: sessionStorage.getItem('userID'),
       searchInput: '',
       filterBookData: []
     }
   },
   methods: {
-    changed: function (event: any) {
+    changed: function () {
       this.filterBookData = this.$store.getters.getBooksBasedOnSearch(this.searchInput)
       this.$store.commit('updateFilterBooksArray', this.filterBookData)
       this.$store.commit('updateSearchInput', this.searchInput)
       console.log('filter', this.filterBookData)
       console.log('search', this.$store.getters.searchInput)
+    },
+    logout () {
+      sessionStorage.removeItem('userID')
     }
   }
 })
 </script>
+
 <style scoped>
+.login-button{
+  color: rgb(0, 0, 0);
+  border: 2px groove rgb(0, 0, 0);
+  height: 36px;
+  margin-left: 12px;
+  padding: 3px;
+  border-radius: 7px;
+  margin-top: 2px;
+}
   .navbar {
     background-color: rgb(29, 140, 204);
     width: 100%;
