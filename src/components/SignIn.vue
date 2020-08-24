@@ -19,8 +19,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import '../assets/styles/App.scss'
-import allUsers from '../data/Users.json'
+// import allUsers from '../data/Users.json'
 import router from '../router'
+
+let tempUsers: any
 
 export default Vue.extend({
   name: 'SignIn',
@@ -30,7 +32,7 @@ export default Vue.extend({
         email: '',
         password: ''
       },
-      users: allUsers
+      users: tempUsers
     }
   },
   methods: {
@@ -53,6 +55,11 @@ export default Vue.extend({
         this.input.password = ''
       }
     }
+  },
+  async beforeMount () {
+    await fetch('https://run.mocky.io/v3/f7ac08ee-cf0e-4028-85ab-50ee075bc007')
+      .then(Response => Response.json())
+      .then(data => (this.users = data))
   }
 })
 </script>
