@@ -9,7 +9,7 @@
             <router-link to='/wishlist' class='link'><img svg-inline class='wishlist-icon' src='../assets/wishlist.png' alt='whishlist' /></router-link>
             <!-- <router-link to='/signin' class='link'><img svg-inline class='login-icon' src='../assets/user-login.png' alt='login' /></router-link> -->
             <a v-if="!this.isLoggedIn" href="/signin" class="login-button"><button >LOGIN</button></a>
-            <a v-if="this.isLoggedIn" href="/home" @click="logout()" class="login-button"><button>LOGOUT</button></a>
+            <a v-if="this.isLoggedIn" href="/" @click="logout()" class="login-button"><button>LOGOUT</button></a>
             </div>
         </div>
 </template>
