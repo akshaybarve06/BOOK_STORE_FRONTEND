@@ -24,23 +24,8 @@
     </v-card>
   </div>
 </template>
-<script lang="ts">
-import Vue from 'vue'
-let books: any
-export default Vue.extend({
-  name: 'Wishlist',
-  data () {
-    return {
-      allBooks: []
-    }
-  },
-  mounted () {
-    books = localStorage.getItem('cartBooks')
-    books = (books) ? JSON.parse(books) : []
-    this.allBooks = books
-  }
-})
+<script lang='ts'>
+import './Wishlist.scss'
+import Wishlist from './Wishlist'
+export default Wishlist
 </script>
-<style lang="stylus" scoped>
-@import '../assets/styles/Wishlist.scss';
-</style>

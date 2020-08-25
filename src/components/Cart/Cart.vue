@@ -1,4 +1,6 @@
 <template>
+<!-- background-image: linear-gradient(to right, rgb(99, 176, 221), rgb(159, 117, 199), rgb(218, 94, 94));
+background-image: linear-gradient(to right bottom, rgb(99, 176, 221), rgb(159, 117, 199), rgb(218, 94, 94)); -->
   <div class="container">
     <v-card class="bookdetails" style="margin: 10px" v-for="items in allBooks" :key="items.title">
       <v-flex xs24 class="pr-8">
@@ -24,23 +26,8 @@
     </v-card>
   </div>
 </template>
-<script lang="ts">
-import Vue from 'vue'
-let books: any
-export default Vue.extend({
-  name: 'Wishlist',
-  data () {
-    return {
-      allBooks: []
-    }
-  },
-  mounted () {
-    books = localStorage.getItem('cartBooks')
-    books = (books) ? JSON.parse(books) : []
-    this.allBooks = books
-  }
-})
+<script lang='ts'>
+import './Cart.scss'
+import Cart from './Cart'
+export default Cart
 </script>
-<style lang="stylus" scoped>
-@import '../assets/styles/Wishlist.scss';
-</style>
