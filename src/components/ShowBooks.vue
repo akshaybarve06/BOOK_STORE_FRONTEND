@@ -67,7 +67,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import books from '../data/books.json'
-
 export default Vue.extend({
   name: 'Showbooks',
   data () {
