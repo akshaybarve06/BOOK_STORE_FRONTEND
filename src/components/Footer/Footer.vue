@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import '@/components/Footer/Footer.css'
+import '@/components/Footer/Footer.scss'
 import Footer from '@/components/Footer/Footer'
 export default Footer
 </script>

@@ -1,7 +1,6 @@
 <template>
-<!-- background-image: linear-gradient(to right, rgb(99, 176, 221), rgb(159, 117, 199), rgb(218, 94, 94));
-background-image: linear-gradient(to right bottom, rgb(99, 176, 221), rgb(159, 117, 199), rgb(218, 94, 94)); -->
   <div class="container">
+    <div class="mycartname">My Cart</div>
     <v-card class="bookdetails" style="margin: 10px" v-for="items in allBooks" :key="items.title">
       <v-flex xs24 class="pr-8">
         <div class="imagediv">

@@ -2,7 +2,7 @@
           <div class='navbar'>
             <div class='book-menu'>
             <img svg-inline class='book-icon' src='@/assets/images/book.png' alt='book' />
-            <a href="/" style="color: rgb(29, 140, 204)"><lable class='bookstore'>Bookstore</lable></a>
+            <a href="/"><lable class='bookstore'>Bookstore</lable></a>
             <input v-model='searchInput' @input='changed' placeholder='   Search Book Here...' class='search'/>
             <button @click='changed' class='search-btn'><img svg-inline class='search-icon' src='@/assets/images/search.png' alt='search' /></button>
             <router-link to='/cart' class='link'><img svg-inline class='cart-icon' src='@/assets/images/cart.png' alt='cart' /></router-link>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import '@/components/Navigation/Navigation.css'
+import '@/components/Navigation/Navigation.scss'
 import Navigation from '@/components/Navigation/Navigation'
 export default Navigation
 </script>
