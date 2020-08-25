@@ -16,6 +16,7 @@ export default Vue.extend({
       localStorage.setItem('cartBooks', JSON.stringify(this.cartArray))
       alert('BOOK ADDED TO CART...')
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     addToWishList (book: any) {
       this.cartArray.push(book)
       localStorage.setItem('wishlistBooks', JSON.stringify(this.cartArray))
