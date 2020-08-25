@@ -23,8 +23,8 @@
             items.price
           }}</v-title>
           <v-card-actions class="buttons">
-            <v-card flat dense v-on:click="addToBag()"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
-            <v-card flat dense v-on:click="addToWishList()"><v-text class="wishlist">WISHLIST</v-text></v-card>
+            <v-card flat dense v-on:click="addToBag(items)"><v-text class="addtobag">ADD TO BAG</v-text></v-card>
+            <v-card flat dense v-on:click="addToWishList(items)"><v-text class="wishlist">WISHLIST</v-text></v-card>
           </v-card-actions>
         </div>
       </v-flex>

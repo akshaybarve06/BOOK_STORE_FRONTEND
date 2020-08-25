@@ -11,14 +11,16 @@ export default Vue.extend({
     }
   },
   methods: {
-    addToBag () {
-      // this.cartArray.push(book)
-      // localStorage.setItem('cartBooks', JSON.stringify(this.cartArray))
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    addToBag (book: any) {
+      this.cartArray.push(book)
+      localStorage.setItem('cartBooks', JSON.stringify(this.cartArray))
       alert('BOOK ADDED TO CART...')
     },
-    addToWishList () {
-      // this.cartArray.push()
-      // localStorage.setItem('wishlistBooks', JSON.stringify(this.cartArray))
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    addToWishList (book: any) {
+      this.cartArray.push()
+      localStorage.setItem('wishlistBooks', JSON.stringify(this.cartArray))
       alert('BOOK ADDED TO WISHLIST...')
     }
   }
