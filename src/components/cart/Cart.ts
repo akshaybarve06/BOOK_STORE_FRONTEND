@@ -4,7 +4,16 @@ export default Vue.extend({
   name: 'Cart',
   data () {
     return {
-      allBooks: []
+      allBooks: [],
+      counter: 1
+    }
+  },
+  methods: {
+    increment () {
+      this.counter++
+    },
+    decrement () {
+      this.counter--
     }
   },
   mounted () {

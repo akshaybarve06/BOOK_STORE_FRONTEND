@@ -33,6 +33,8 @@
 </template>
 <script lang='ts'>
 import ShowBooks from './ShowBooks'
-import './ShowBooks.scss'
 export default ShowBooks
 </script>
+<style lang="stylus" scoped>
+@import './ShowBooks.scss'
+</style>

@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../components/Home/Home.vue'
+import Home from '../components/home/Home.vue'
 import SignIn from '../components/SignIn.vue'
 import SignUp from '@/components/signup/SignUp.vue'
 import ForgotPassword from '@/components/forgot-password/ForgotPassword.vue'
 import ResetPassword from '@/components/reset-password/ResetPassword.vue'
-import Cart from '../components/Cart/Cart.vue'
-import Wishlist from '../components/Wishlist/Wishlist.vue'
+import Cart from '../components/cart/Cart.vue'
+import Wishlist from '../components/wishlist/Wishlist.vue'
 
 Vue.use(VueRouter)
 

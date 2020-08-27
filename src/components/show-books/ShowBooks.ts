@@ -19,7 +19,7 @@ export default Vue.extend({
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     addToWishList (book: any) {
-      this.cartArray.push()
+      this.cartArray.push(book)
       localStorage.setItem('wishlistBooks', JSON.stringify(this.cartArray))
       alert('BOOK ADDED TO WISHLIST...')
     }

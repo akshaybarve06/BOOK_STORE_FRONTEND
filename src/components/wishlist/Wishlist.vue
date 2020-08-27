@@ -25,7 +25,9 @@
   </div>
 </template>
 <script lang='ts'>
-import './Wishlist.scss'
 import Wishlist from './Wishlist'
 export default Wishlist
 </script>
+<style lang="stylus" scoped>
+@import './Wishlist.scss'
+</style>

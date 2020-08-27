@@ -1,5 +1,5 @@
 import Vue from 'vue'
 
-export default Vue.extend({
-  name: 'Footer'
-})
+export default class Cart extends Vue {
+
+}

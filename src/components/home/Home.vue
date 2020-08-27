@@ -6,9 +6,8 @@
 </template>
 
 <script lang='ts'>
-import './Home.scss'
 import Home from './Home'
-import ShowBooks from '@/components/ShowBooks/ShowBooks.vue'
+import ShowBooks from '@/components/show-books/ShowBooks.vue'
 import books from '@/data/books.json'
 export default {
   name: 'Home',
@@ -22,3 +21,6 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+@import './Home.scss'
+</style>
