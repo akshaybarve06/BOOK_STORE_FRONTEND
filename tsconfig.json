@@ -36,7 +36,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "__tests__/**/*.ts",
-    "__tests__/**/*.tsx", "__tests__/app.spec.js"
+    "__tests__/**/*.tsx", "__tests__/app.spec.ts"
   ],
   "exclude": [
     "node_modules",
