@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@types/jest": "^26.0.10",
@@ -22,6 +23,7 @@
     "vuex-module-decorators": "^0.17.0"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/babel-preset-app": "^4.5.4",
@@ -38,6 +40,7 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
+    "@vue/cli-plugin-unit-jest": "^4.5.4",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",

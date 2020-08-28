@@ -24,6 +24,7 @@ module.exports = {
         "html",
         "text-summary"
     ],
+    preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel'
     // moduleNameMapper: {
     //     "^.+\\.(css|less|scss)$": "identity-obj-proxy",
         // "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
