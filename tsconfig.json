@@ -15,11 +15,13 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "vuetify"
+      "vuetify",
+      "jest"
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "src/*",
+        "./*"
       ]
     },
     "lib": [
@@ -33,10 +35,12 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "__tests__/**/*.ts",
+    "__tests__/**/*.tsx", "__tests__/app.spec.js"
   ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.spec.js"
+  ] 
 }
