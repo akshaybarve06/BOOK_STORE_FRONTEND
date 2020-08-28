@@ -15,6 +15,10 @@
 
 <script lang="ts">
 import '@/components/Navigation/Navigation.scss'
-import Navigation from '@/components/Navigation/Navigation'
-export default Navigation
+import Vue from 'vue'
+import Navigation from './Navigation'
+
+export default Vue.extend({
+  name: 'Navigation'
+})
 </script>

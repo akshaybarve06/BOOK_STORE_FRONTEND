@@ -7,7 +7,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import '@/components/Footer/Footer.scss'
-import Footer from '@/components/Footer/Footer'
-export default Footer
+import Footer from './Footer'
+
+export default Vue.extend({
+  name: 'Footer'
+})
 </script>
